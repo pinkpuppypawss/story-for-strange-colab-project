@@ -129,7 +129,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile1`, function (sprite, l
     tiles.setCurrentTilemap(tilemap`level14`)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile6`, function (sprite, location) {
-    game.setGameOverMessage(true, "Congrats!")
+    game.setGameOverMessage(true, "vroom vroom you win")
     game.gameOver(true)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile`, function (sprite, location) {
