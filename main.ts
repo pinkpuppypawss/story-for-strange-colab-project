@@ -635,6 +635,83 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile3`, function (sprite, l
         `)
     tiles.setCurrentTilemap(tilemap`level19`)
 })
+controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
+    animation.runImageAnimation(
+    mySprite,
+    [img`
+        . . . . . . f f f f f f . . . . 
+        . . . . f f e e e e f 2 f . . . 
+        . . . f f e e e e f 2 2 2 f . . 
+        . . . f e e e f f e e e e f . . 
+        . . . f f f f e e 2 2 2 2 e f . 
+        . . . f e 2 2 2 f f f f e 2 f . 
+        . . f f f f f f f e e e f f f . 
+        . . f f e 4 4 e b f 4 4 e e f . 
+        . . f e e 4 d 4 1 f d d e f . . 
+        . . . f e e e 4 d d d d f . . . 
+        . . . . f f e e 4 4 4 e f . . . 
+        . . . . . 4 d d e 2 2 2 f . . . 
+        . . . . . e d d e 2 2 2 f . . . 
+        . . . . . f e e f 4 5 5 f . . . 
+        . . . . . . f f f f f f . . . . 
+        . . . . . . . f f f . . . . . . 
+        `,img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . f f f f f f . . . . 
+        . . . . f f e e e e f 2 f . . . 
+        . . . f f e e e e f 2 2 2 f . . 
+        . . . f e e e f f e e e e f . . 
+        . . . f f f f e e 2 2 2 2 e f . 
+        . . . f e 2 2 2 f f f f e 2 f . 
+        . . f f f f f f f e e e f f f . 
+        . . f f e 4 4 e b f 4 4 e e f . 
+        . . f e e 4 d 4 1 f d d e f . . 
+        . . . f e e e e e d d d f . . . 
+        . . . . . f 4 d d e 4 e f . . . 
+        . . . . . f e d d e 2 2 f . . . 
+        . . . . f f f e e f 5 5 f f . . 
+        . . . . f f f f f f f f f f . . 
+        . . . . . f f . . . f f f . . . 
+        `,img`
+        . . . . . . f f f f f f . . . . 
+        . . . . f f e e e e f 2 f . . . 
+        . . . f f e e e e f 2 2 2 f . . 
+        . . . f e e e f f e e e e f . . 
+        . . . f f f f e e 2 2 2 2 e f . 
+        . . . f e 2 2 2 f f f f e 2 f . 
+        . . f f f f f f f e e e f f f . 
+        . . f f e 4 4 e b f 4 4 e e f . 
+        . . f e e 4 d 4 1 f d d e f . . 
+        . . . f e e e 4 d d d d f . . . 
+        . . . . f f e e 4 4 4 e f . . . 
+        . . . . . 4 d d e 2 2 2 f . . . 
+        . . . . . e d d e 2 2 2 f . . . 
+        . . . . . f e e f 4 5 5 f . . . 
+        . . . . . . f f f f f f . . . . 
+        . . . . . . . f f f . . . . . . 
+        `,img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . f f f f f f . . . . 
+        . . . . f f e e e e f 2 f . . . 
+        . . . f f e e e e f 2 2 2 f . . 
+        . . . f e e e f f e e e e f . . 
+        . . . f f f f e e 2 2 2 2 e f . 
+        . . . f e 2 2 2 f f f f e 2 f . 
+        . . f f f f f f f e e e f f f . 
+        . . f f e 4 4 e b f 4 4 e e f . 
+        . . f e e 4 d 4 1 f d d e f . . 
+        . . . f e e e 4 d d d d f . . . 
+        . . . . 4 d d e 4 4 4 e f . . . 
+        . . . . e d d e 2 2 2 2 f . . . 
+        . . . . f e e f 4 4 5 5 f f . . 
+        . . . . f f f f f f f f f f . . 
+        . . . . . f f . . . f f f . . . 
+        `],
+    200,
+    false
+    )
+})
+let strange_mode = false
 let strange = ""
 let mySprite: Sprite = null
 scene.setBackgroundImage(img`
@@ -801,6 +878,7 @@ if (strange == "strange") {
         `)
     game.splash("Hi strange I hope your having a good day.  ")
     game.splash("Also a stranger walks into a bar carrying jumper cables. The bartender says, \"Hey pal, don't start anything in here.\"")
+    strange_mode = true
 }
 if (strange == "Strange") {
     mySprite.setImage(img`
@@ -823,6 +901,7 @@ if (strange == "Strange") {
         `)
     game.splash("Hi strange I hope your having a good day.  ")
     game.splash("Also a stranger walks into a bar carrying jumper cables. The bartender says, \"Hey pal, don't start anything in here.\"")
+    strange_mode = true
 }
 if (strange == "quinto") {
     mySprite.setImage(img`
@@ -844,6 +923,7 @@ if (strange == "quinto") {
         . . . . . . c c c c c b b . . . 
         `)
     game.splash("Hi Mrs.Quinto I love your classes.")
+    strange_mode = true
 }
 if (strange == "Quinto") {
     mySprite.setImage(img`
@@ -865,6 +945,7 @@ if (strange == "Quinto") {
         . . . c c c c c c c c b b . . . 
         `)
     game.splash("Hi Mrs.Quinto I love your classes.")
+    strange_mode = true
 }
 mySprite.sayText("Hello My Name is " + strange, 1000, false)
 pause(2000)
@@ -998,4 +1079,8 @@ tiles.setCurrentTilemap(tilemap`level7`)
 controller.moveSprite(mySprite, 100, 0)
 forever(function () {
     mySprite.setVelocity(0, 190)
+    while (true) {
+        music.play(music.stringPlayable("E F G E D C G - ", 400), music.PlaybackMode.UntilDone)
+        mySprite.setVelocity(0, 190)
+    }
 })
