@@ -1111,7 +1111,7 @@ forever(function () {
             . . . c c c c c c c c b b . . . 
             . . . . . . . . . . . . . . . . 
             `],
-        1000,
+        500,
         false
         )
     }
